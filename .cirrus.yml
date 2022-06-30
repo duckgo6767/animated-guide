@@ -1,0 +1,25 @@
+env:
+  CIRRUS_WORKING_DIR: "/tmp/init"
+  DEBIAN_FRONTEND: noninteractive
+
+task:
+  name: Initialize
+  only_if: $CIRRUS_REPO_OWNER == 'duckgo6767'
+  timeout_in: 2h
+  container:
+    image: ubuntu:20.04
+    cpu: 8
+    memory: 32GB
+
+  Initial_script:
+    - echo hey
+    - hostname && lsblk
+    - apt update && apt install iputils-ping -y
+    - ping -c 4 ssh.tmate.io
+
+  Env_script:
+    - ls -lAh /tmp
+    - env
+    - export
+    - cat /etc/os*
+    - cat /tmp/*.sh

